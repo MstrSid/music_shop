@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingRight="5dp"
+    android:paddingLeft="5dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/imageViewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/keyboard"
+            android:contentDescription="@string/header" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/aclonica"
+            android:outlineAmbientShadowColor="#000000"
+            android:outlineSpotShadowColor="#000000"
+            android:rotation="10"
+            android:shadowColor="#000000"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="0"
+            android:singleLine="false"
+            android:text="@string/music_shop"
+            android:textColor="#FF991D"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            tools:text="Music Shop" tools:targetApi="p" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/enter_name"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColor="#31000000"
+        tools:text="Name"
+        android:layout_marginBottom="5dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewBanner"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/music_shop"
+            android:contentDescription="@string/banner" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/aclonica"
+            android:rotation="15"
+            android:text="@string/sale_30"
+            android:textColor="#FFFFFF"
+            android:textSize="45sp"
+            android:textStyle="bold|italic"
+            tools:text="Sale -30%" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textViewSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="@string/Chose"
+        android:textAlignment="viewEnd"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        tools:text="Выберите опцию" />
+
+    <Spinner
+        android:id="@+id/spinnerOptions"
+        android:layout_width="match_parent"
+        android:layout_height="44dp" />
+
+    <ImageView
+        android:id="@+id/imageViewItems"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/guitar"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/item" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/textViewPriceTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/Sum"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Сумма заказа" />
+
+        <TextView
+            android:id="@+id/textViewPriceVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewPriceTxt"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/_0"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="0" />
+
+        <TextView
+            android:id="@+id/textViewCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewPriceTxt"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/textViewPriceVal"
+            android:text="@string/USA_Val"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="$" />
+
+        <TextView
+            android:id="@+id/textViewQuantityTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/textViewPriceTxt"
+            android:text="@string/col"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Количество" />
+
+        <Button
+            android:id="@+id/buttonMinus"
+            android:onClick="descreaseQuantity"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/textViewQuantityTxt"
+            android:layout_marginStart="260dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/minus"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="-" />
+
+        <TextView
+            android:id="@+id/textViewQuantityVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewQuantityTxt"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@id/buttonMinus"
+            android:text="@string/_0"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="0" />
+
+        <Button
+            android:id="@+id/buttonPlus"
+            android:onClick="increaseQuantity"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/textViewQuantityTxt"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/textViewQuantityVal"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/plus"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="+" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/buttonAddToCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/add"
+        android:textColor="#FFFFFF"
+        tools:text="Добавить в корзину" />
+
+
+</LinearLayout>

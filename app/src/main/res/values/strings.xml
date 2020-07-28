@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Music Shop</string>
+    <string name="name">Name</string>
+    <string name="enter_name">Введите имя</string>
+    <string name="_30">30%</string>
+    <string name="banner">Banner</string>
+    <string name="item">item</string>
+    <string name="header">Header</string>
+    <string name="music_shop">Music Shop</string>
+    <string name="sale_30">Sale -30%</string>
+    <string name="Chose">Выберите товар</string>
+    <string name="Sum">Сумма заказа</string>
+    <string name="_0">0</string>
+    <string name="USA_Val">$</string>
+    <string name="col">Количество</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="add">Добавить в корзину</string>
+</resources>
